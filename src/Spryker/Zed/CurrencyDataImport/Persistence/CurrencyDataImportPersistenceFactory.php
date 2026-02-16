@@ -11,7 +11,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
 
 /**
  * @method \Spryker\Zed\CurrencyDataImport\CurrencyDataImportConfig getConfig()
- * @method \Spryker\Zed\CurrencyDataImport\Persistence\CurrencyDataImportQueryContainerInterface getQueryContainer()
  */
 class CurrencyDataImportPersistenceFactory extends AbstractPersistenceFactory
 {
