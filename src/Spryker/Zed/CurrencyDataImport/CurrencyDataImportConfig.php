@@ -29,9 +29,6 @@ class CurrencyDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($moduleDataImportDirectory . 'currency_store.csv', static::IMPORT_TYPE_CURRENCY_STORE);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

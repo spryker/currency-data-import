@@ -46,9 +46,6 @@ class CurrencyStoreDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testCurrencyStoreImportImportsData(): void
     {
         // Arrange
@@ -71,9 +68,6 @@ class CurrencyStoreDataImportPluginTest extends Unit
         $this->assertGreaterThan(0, $this->tester->getCurrencyStoreRelationsCount());
     }
 
-    /**
-     * @return void
-     */
     public function testImportWithUnknownCurrencyCode(): void
     {
         //Assert
@@ -96,9 +90,6 @@ class CurrencyStoreDataImportPluginTest extends Unit
         $currencyStoreDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportWithUnknownStore(): void
     {
         //Assert
@@ -121,9 +112,6 @@ class CurrencyStoreDataImportPluginTest extends Unit
         $currencyStoreDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testCurrencyStoreGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange

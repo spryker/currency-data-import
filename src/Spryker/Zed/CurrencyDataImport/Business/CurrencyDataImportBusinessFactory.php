@@ -24,11 +24,6 @@ use Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
  */
 class CurrencyDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getCurrencyStoreDataImporter(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterInterface {
@@ -47,25 +42,16 @@ class CurrencyDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCurrencyNameToIdCurrencyStep(): DataImportStepInterface
     {
         return new CurrencyCodeToIdCurrencyStep($this->getCurrencyPropelQuery());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStoreNameToIdStoreStep(): DataImportStepInterface
     {
         return new StoreNameToIdStoreStep($this->getStorePropelQuery());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCurrencyStoreWriterStep(): DataImportStepInterface
     {
         return new CurrencyStoreWriterStep(

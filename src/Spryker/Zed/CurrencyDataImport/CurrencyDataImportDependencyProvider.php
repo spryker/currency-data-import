@@ -33,11 +33,6 @@ class CurrencyDataImportDependencyProvider extends DataImportDependencyProvider
      */
     public const PROPEL_QUERY_STORE = 'PROPEL_QUERY_STORE';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -49,11 +44,6 @@ class CurrencyDataImportDependencyProvider extends DataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCurrencyPropelQuery(Container $container): Container
     {
         $container->set(static::PROPEL_QUERY_CURRENCY, $container->factory(function (): SpyCurrencyQuery {
@@ -63,11 +53,6 @@ class CurrencyDataImportDependencyProvider extends DataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCurrencyStorePropelQuery(Container $container): Container
     {
         $container->set(static::PROPEL_QUERY_CURRENCY_STORE, $container->factory(function (): SpyCurrencyStoreQuery {
@@ -77,11 +62,6 @@ class CurrencyDataImportDependencyProvider extends DataImportDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addStorePropelQuery(Container $container): Container
     {
         $container->set(static::PROPEL_QUERY_STORE, $container->factory(function (): SpyStoreQuery {
