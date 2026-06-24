@@ -13,6 +13,8 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class CurrencyDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_CURRENCY_STORE = 'currency-store';
